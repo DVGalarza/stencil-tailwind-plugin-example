@@ -7,18 +7,21 @@ export interface LinkProps {
   };
   to?: string;
 }
-export const Link: FunctionalComponent<LinkProps> = ({to, class: classes = '', classObj }, children) => {
+export const Link: FunctionalComponent<LinkProps> = (
+  { to, class: classes = '', classObj },
+  children
+) => {
   return (
     <a
       href={to}
       class={{
         'no-underline transition duration-300 ease-in-out rounded cursor-pointer': true,
         [classes]: true,
-        ...classObj
+        ...classObj,
       }}
       rel="noopener noreferrer"
     >
-      { children }
+      {children}
     </a>
   );
 };

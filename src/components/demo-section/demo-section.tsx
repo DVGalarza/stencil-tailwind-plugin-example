@@ -7,7 +7,6 @@ import { Badge } from '../internal/Badge';
   shadow: true,
 })
 export class DemoSection {
-
   render() {
     return (
       <Host>
@@ -28,16 +27,27 @@ export class DemoSection {
                 </demo-card>
                 <demo-card
                   card-title="Form Components"
-                  subtitle={<span>This form uses <code>@tailwindcss/forms</code></span>}
+                  subtitle={
+                    <span>
+                      This form uses <code>@tailwindcss/forms</code>
+                    </span>
+                  }
                 >
                   <div class="grid grid-cols-1 gap-2">
                     <label class="block">
                       <span class="text-gray-700">Input field</span>
-                      <input type="text" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="" />
+                      <input
+                        type="text"
+                        class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                        placeholder=""
+                      />
                     </label>
                     <label class="block">
                       <span class="text-gray-700">Date picker</span>
-                      <input type="date" class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" />
+                      <input
+                        type="date"
+                        class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                      />
                     </label>
                   </div>
                 </demo-card>

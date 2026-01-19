@@ -6,8 +6,8 @@ import { Component, Host, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class DemoCard {
-  @Prop() cardTitle: string;
-  @Prop() subtitle: string;
+  @Prop() cardTitle?: string;
+  @Prop() subtitle?: string;
 
   render() {
     const { cardTitle, subtitle } = this;
