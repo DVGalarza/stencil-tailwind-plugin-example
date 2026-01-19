@@ -139,3 +139,7 @@ UserInterfaceState.xcuserstate
 
 # Husky
 .husky/_
+
+# Storybook
+storybook-static/
+custom-elements.json

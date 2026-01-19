@@ -5,17 +5,20 @@ This repo is an example repo for showing the integration of the stencil-tailwind
 ## Getting started with Stencil Component Example
 
 Clone the repo, and install the dependencies:
+
 ```shell
 cd stencil-component-starter
 npm install
 ```
 
 Start the stencil dev server:
+
 ```shell
 npm start
 ```
 
 If you would like to build the application:
+
 ```shell
 npm run build
 ```
@@ -25,3 +28,31 @@ npm run build
 As an example of what to expect
 
 ![example-output-cards](images/example-output.png)
+
+## Storybook
+
+Develop and document components in isolation with Storybook.
+
+### Running Storybook
+
+First, build your Stencil project to generate the component manifest:
+
+```shell
+pnpm build
+```
+
+Then start Storybook:
+
+```shell
+pnpm storybook
+```
+
+Storybook will be available at `http://localhost:6006`
+
+### Building Storybook
+
+To build a static version of Storybook:
+
+```shell
+pnpm build-storybook
+```
