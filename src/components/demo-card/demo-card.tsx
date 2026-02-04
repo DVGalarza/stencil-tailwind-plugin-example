@@ -1,4 +1,5 @@
 import { Component, Host, h, Prop } from '@stencil/core';
+import { ELEMENT_IDS, demoCardClasses, TEST_IDS } from './demo-card.constants';
 
 @Component({
   tag: 'demo-card',
@@ -14,15 +15,31 @@ export class DemoCard {
 
     return (
       <Host>
-        <div class="flex flex-col items-center justify-between px-4 py-8 mb-4 bg-white rounded-md shadow h-[272px] w-[312px]">
-          <div class="flex flex-col items-center">
-            <span class="text-4xl font-semibold font-title">{cardTitle}</span>
-            <span class="text-sm">{subtitle}</span>
+        <section
+          aria-labelledby={ELEMENT_IDS.CARD_TITLE}
+          class={demoCardClasses.card}
+          data-testid={TEST_IDS.CARD}
+        >
+          <div data-testid={TEST_IDS.CARD_HEADER} class={demoCardClasses.header}>
+            <h3
+              data-testid={TEST_IDS.CARD_TITLE}
+              class={demoCardClasses.title}
+              id={ELEMENT_IDS.CARD_TITLE}
+            >
+              {cardTitle}
+            </h3>
+            <h4
+              data-testid={TEST_IDS.CARD_SUBTITLE}
+              class={demoCardClasses.subtitle}
+              id={ELEMENT_IDS.CARD_SUBTITLE}
+            >
+              {subtitle}
+            </h4>
           </div>
-          <div class="flex gap-2 mt-3">
+          <div data-testid={TEST_IDS.CARD_CONTENT} class={demoCardClasses.cardContent}>
             <slot />
           </div>
-        </div>
+        </section>
       </Host>
     );
   }

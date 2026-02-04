@@ -1,3 +1,22 @@
 :host {
   display: block;
+
+  .demo-card {
+    @apply flex flex-col items-center justify-between px-4 py-8 mb-4 bg-white rounded-md shadow h-[272px] w-[312px];
+
+    .demo-card__header {
+      @apply flex flex-col items-center;
+
+      .demo-card__title {
+        @apply text-4xl font-semibold font-title;
+      }
+
+      .demo-card__subtitle {
+        @apply text-sm;
+      }
+    }
+    .demo-card__content {
+      @apply flex gap-2 mt-3;
+    }
+  }
 }
